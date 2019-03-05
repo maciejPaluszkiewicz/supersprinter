@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Super Sprinter 3000</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Maciek Paluszkiewicz">
+        <link rel="stylesheet" type="text/css" href="/addUserStory.css">
+    </head>
+    <body>
+        {{#data.id}}
+            <h1>Edit User Story</h1>
+        {{/data.id}}
+        {{^data.id}}    
+            <h1>Add new User Story</h1>
+        {{/data.id}}
+        
+        {{#error}}
+            <div class="errorInfo">
+                Story Title must be at least 5 characters in single row <br>
+                Business Value must be at min 100 point, max 1500, divisible by 100. <br>
+                Estimation must be at min 0.5, max 40, divisible by 0.5.<br>
+            </div>
+        {{/error}}
+
+        {{#data.id}}
+            <form method="POST" action="/edit">
+                <input name="id" value="{{data.id}}" type="hidden" />  
+        {{/data.id}}
+        {{^data.id}}    
+            <form method="POST" action="/add"> 
+        {{/data.id}}
+                <label>Story Title</label>
+                <input name="story_title" type="text" value="{{data.story_title}}"/>
+                <label>User Story</label> 
+                <textarea name="user_story">{{data.user_story}}</textarea>
+                <label>Acceptance Criteria</label>
+                <textarea name="acceptance_criteria">{{data.acceptance_criteria}}</textarea>
+                <label>Business Value</label>
+                <input name="business_value" type="text" value="{{data.business_value}}"/>
+                <label>Estimation</label>
+                <input name="estimation" type="text" value="{{data.estimation}}"/>
+                <label>Status</label>
+                <select name="status" value="{{data.status}}">
+                    <option value="todo">todo</option>
+                    <option value="in_progress">in_progress</option>
+                    <option value="testing">testing</option>
+                    <option value="implemented">implemented</option>
+                </select>
+                <button type="submit">Save User Story</button>
+            </form>
+        <a href="/list">Cancel and back to main page</a>
+    </body>
+</html>

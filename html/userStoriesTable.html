@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Super Sprinter 3000</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Maciek Paluszkiewicz">
+        <link rel="stylesheet" type="text/css" href="/userStoriesTable.css">
+    </head>
+    <body>
+        <h1>Super Sprinter 3000</h1>
+        <a href="/add">Add new User Story</a>
+        <table>
+            <thead>
+                <tr>
+                    <th class="headerId">Id</th>
+                    <th class="headerST">Story Title</th>
+                    <th class="headerUS">User Story</th>
+                    <th class="headerAC">Acceptance Criteria</th>
+                    <th class="headerBV">Business Value</th>
+                    <th class="headerEs">Estimation</th>
+                    <th class="headerStatus">Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {{#stories}}
+                <tr>
+                    <td>
+                        <a href="/edit/{{id}}">{{id}}</a>
+                    </td>
+                    <td>{{story_title}}</td>
+                    <td>{{user_story}}</td>
+                    <td>{{acceptance_criteria}}</td>
+                    <td>{{business_value}}</td>
+                    <td>{{estimation}}</td>
+                    <td>{{status}}</td>
+                </tr>
+                {{/stories}}
+            </tbody>
+        </table>
+    </body>
+</html>

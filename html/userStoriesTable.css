@@ -1,0 +1,32 @@
+td {
+    padding: 10px;
+}
+
+.headerId {
+    width: 10%;
+    
+}
+
+.headerST {
+    width: 10%;
+}
+
+.headerUS {
+    width: 20%;
+}
+
+.headerAC {
+    width: 30%;
+}
+
+.headerBV {
+    width: 5%;
+}
+
+.headerEs {
+    width: 5%;
+}
+
+.headerStatus {
+    width: 5%;
+}
