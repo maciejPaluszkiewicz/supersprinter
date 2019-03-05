@@ -5,11 +5,7 @@
   "private": true,
   "dependencies": {
     "express": "4.x",
-    "morgan": "1.x",
-    "response-time": "2.x",
-    "body-parser" : "1.x"
-  },
-  "devDependencies": {
+    "body-parser" : "1.x",
     "mustache": "^3.0.1"
   }
 }

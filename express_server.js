@@ -1,8 +1,8 @@
-let express = require('express');
+let express = require("express");
     mustache = require("mustache");
     bodyParser = require("body-parser");
 
-let helpers = require("./helpers.js")
+let helpers = require("./helpers.js");
 
 let app = express();
 
@@ -47,10 +47,6 @@ app.post("/edit", function(req, res) {
         let template = helpers.load_template("addUserStory.html");
         res.end(mustache.render(template, model));
     }
-});
-
-app.get("*", function (req, res) {
-    res.end("Hello world, zomg, express-style\n");
 });
 
 app.listen(8080);
