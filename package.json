@@ -1,0 +1,15 @@
+{
+  "name": "express_test_app",
+  "description": "we're getting started with express",
+  "verion": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "4.x",
+    "morgan": "1.x",
+    "response-time": "2.x",
+    "body-parser" : "1.x"
+  },
+  "devDependencies": {
+    "mustache": "^3.0.1"
+  }
+}
